@@ -1,3 +1,4 @@
+#file=open(collatz.txt,w)
 #Se crea una lista
 lista=[]
 #Creo la funcion corto que ejecutara el codigo de collatz
@@ -16,13 +17,14 @@ def corto(collatz):
             collatz=(collatz*3)+1
             lista.append(collatz)
 
-        @Si es uno se imprime el uno y se termina 
+        #Si es uno se imprime el uno y se termina 
         if collatz == 1:
             lista.append("1")
             print("1")
             
 #Creo un ciclo para que se ejecute desde el 2 hasta mi numero de carnet
-for i in range(2,779):
+#mi numero de carnet es 779 asi que le sumo uno para que llegue hasta 779
+for i in range(2,780):
     corto(i)
     #print (lista[35])
 
